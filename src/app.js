@@ -4,12 +4,26 @@ import 'swiper/swiper-bundle.css';
 import './app.css';
 
 const App = () => {
+    const slidesData = [
+        { name: 'HTML', description: 'Something about HTML', id: 1 },
+        { name: 'CSS', description: 'Something about CSS', id: 2 },
+        { name: 'JavaScript', description: 'Something about JavaScript', id: 3 },
+        { name: 'React', description: 'Something about React', id: 4 }
+    ];
+    const slides = slidesData.map((item) => {
+        return (
+            <SwiperSlide key={item.id}>
+                <div>
+                    <h1>{item.name}</h1>
+                    <p>{item.description}</p>
+                </div>
+            </SwiperSlide>
+        )
+    });
+
     return (
         <Swiper>
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
+            {slides}
         </Swiper>
     )
 };
