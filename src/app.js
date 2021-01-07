@@ -1,10 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './app.css';
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
 const App = () => {
     const slidesData = [
@@ -27,6 +27,7 @@ const App = () => {
     return (
         <Swiper
             navigation
+            pagination
         >
             {slides}
         </Swiper>
