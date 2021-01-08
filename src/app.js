@@ -1,10 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './app.css';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const App = () => {
     const slidesData = [
@@ -29,6 +29,10 @@ const App = () => {
             navigation
             pagination={{ clickable: true }}
             loop
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false
+            }}
         >
             {slides}
         </Swiper>
