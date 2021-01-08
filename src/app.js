@@ -28,6 +28,7 @@ const App = () => {
         <Swiper
             navigation
             pagination={{ clickable: true }}
+            loop
         >
             {slides}
         </Swiper>
