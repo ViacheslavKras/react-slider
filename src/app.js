@@ -27,7 +27,7 @@ const App = () => {
     return (
         <Swiper
             navigation
-            pagination
+            pagination={{ clickable: true }}
         >
             {slides}
         </Swiper>
