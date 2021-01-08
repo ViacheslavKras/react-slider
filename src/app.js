@@ -1,10 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay, Keyboard } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './app.css';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+SwiperCore.use([Navigation, Pagination, Autoplay, Keyboard]);
 
 const App = () => {
     const slidesData = [
@@ -33,6 +33,7 @@ const App = () => {
                 delay: 3000,
                 disableOnInteraction: false
             }}
+            keyboard
         >
             {slides}
         </Swiper>
